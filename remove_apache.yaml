@@ -1,0 +1,15 @@
+---
+
+- hosts: ansible-client
+  become: true
+  tasks:
+
+  - name: install apache2 package
+    apt:
+      name: apache2
+      state: absent  
+
+  - name: add php 
+    apt:
+      name: libapache2-mod-php
+      state: absent
