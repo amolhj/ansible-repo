@@ -7,4 +7,9 @@
   - name: install apache2 package
     apt:
       name: apache2
+      state: latest  
 
+  - name: add php 
+    apt:
+      name: libapache2-mod-php
+      state: latest
